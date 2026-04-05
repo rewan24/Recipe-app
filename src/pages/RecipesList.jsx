@@ -41,7 +41,7 @@ const RecipesList = () => {
             <span className="visually-hidden">Loading...</span>
           </div>
         }
-        <div className="row row-cols-1 row-cols-md-3 g-4 px-3">
+        {/* <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 px-3">
           {recipes.map((recipe)=>{
           return( <div className="col" key={recipe.id}>
             <RecipeCard recipeItem={recipe} onDelete={(id) => handleDeleteRecipe(id)}/>
@@ -49,7 +49,15 @@ const RecipesList = () => {
             );
 
             })}
-        </div>
+        </div> */}
+
+<div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 px-3">
+  {recipes.map((recipe) => (
+    <div className="col" key={recipe.id}>
+      <RecipeCard recipeItem={recipe} onDelete={handleDeleteRecipe} />
+    </div>
+  ))}
+</div>
       </div>
      </>
   );
