@@ -10,6 +10,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root {
+  /* flex: 1;    */
+  height: 100%;       /* نخلي الارتفاع 100% */
+  margin: 0;          /* نتأكد مفيش margin افتراضي */
+  display: flex;      /* نخلي الصفحة flex */
+  flex-direction: column; /* ترتيب عمودي */       /* لتأكد من توسيع المحتوى */
+}
+
+main {
+  flex: 1;            /* المحتوى الرئيسي ياخد كل المساحة الممكنة */
 }
 
 a {
